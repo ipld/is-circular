@@ -34,7 +34,7 @@ function _isCircular (obj, ignore, parentList) {
 
     var val = obj[key]
     if (val instanceof Object) {
-      if (parentList.contains(val) || _isCircular(val, parentList)) {
+      if (parentList.contains(val) || _isCircular(val, ignore, parentList)) {
         return true
       }
     }
